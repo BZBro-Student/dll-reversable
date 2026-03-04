@@ -15,7 +15,7 @@ public class IUDoubleLinkedList<T> implements IndexedUnsortedList<T> {
         HEADSTART, TAILSTART
     };
 
-    private Node<T> head, tail;
+    protected Node<T> head, tail;
     private int size;
     private int modCount;
 
@@ -475,7 +475,7 @@ public class IUDoubleLinkedList<T> implements IndexedUnsortedList<T> {
      * iterator.
      * 
      */
-    private class IUDoubleLinkedListListIterator implements ListIterator<T> {
+    protected class IUDoubleLinkedListListIterator implements ListIterator<T> {
         private Node<T> currLocation;
         private Node<T> lastReturnedNode;
         private Boolean canRemoveOrAdd;
